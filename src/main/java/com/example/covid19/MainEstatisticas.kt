@@ -15,8 +15,20 @@ class MainEstatisticas : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_estisticas)
 
+        val actionbar = supportActionBar
+
+        actionbar!!.title = "Estatísticas"
+
+        actionbar.setDisplayHomeAsUpEnabled(true)
+        actionbar.setDisplayHomeAsUpEnabled(true)
+
         val data = intent.getStringExtra("Data")
         throughJson(this, data)
+    }
+
+    override fun onSupportNavigateUp(): Boolean {
+        onBackPressed()
+        return true
     }
 
     fun throughJson(context: Context, data: String) {

@@ -6,7 +6,9 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_marginBottom="18dp"
-    android:background="#373061">
+    android:background="#373061"
+    android:focusable="true"
+    android:focusableInTouchMode="true" >
 
     <TextView
         android:id="@+id/viewData"
@@ -34,6 +36,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="28dp"
         android:text="Confirmados"
+        android:contentDescription="Casos confirmados"
         android:textColor="#FFFFFF"
         android:textSize="18sp"
         app:layout_constraintEnd_toStartOf="@+id/textView4"
@@ -50,6 +53,7 @@
         android:layout_marginTop="28dp"
         android:layout_marginEnd="76dp"
         android:text="Óbitos"
+        android:contentDescription="Número de óbitos"
         android:textColor="#FFFFFF"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
