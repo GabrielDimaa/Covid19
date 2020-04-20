@@ -16,7 +16,7 @@ class MainEstatisticas : AppCompatActivity() {
         setContentView(R.layout.activity_estisticas)
 
         val actionbar = supportActionBar
-        var estatisticas = getString(R.string.estatisticas);
+        var estatisticas = getString(R.string.estatisticas)
 
         actionbar!!.title = estatisticas
 

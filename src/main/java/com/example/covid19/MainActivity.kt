@@ -1,29 +1,17 @@
 package com.example.covid19
 
 import android.content.Context
-import android.content.Intent
-import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
-import android.util.LogPrinter
-import android.view.View
-import android.widget.ArrayAdapter
-import android.widget.LinearLayout
-import android.widget.ScrollView
-import androidx.annotation.RequiresApi
-import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.recyclerview.widget.LinearLayoutManager
 import kotlinx.android.synthetic.main.activity_main.*
-import kotlinx.android.synthetic.main.view_boletim.*
 import org.json.JSONArray
-import org.json.JSONObject
 import java.io.IOException
 import java.io.InputStream
-import java.text.SimpleDateFormat
 import java.time.LocalDate
 import java.time.format.DateTimeFormatter
-import java.util.*
+import kotlin.collections.ArrayList
 
 open class MainActivity : AppCompatActivity() {
 
@@ -35,6 +23,7 @@ open class MainActivity : AppCompatActivity() {
     setContentView(R.layout.activity_main)
 
     readJson(this)
+    list(lista)
   }
 
   fun readJson(context: Context){
@@ -53,7 +42,6 @@ open class MainActivity : AppCompatActivity() {
         var boletim__: Boletim = Boletim(data = data, hora = hora, mortes = obito, confirmados = casos)
 
         lista.add(boletim__)
-        initRecycler()
       }
     }
     catch (e : IOException){
@@ -61,6 +49,12 @@ open class MainActivity : AppCompatActivity() {
     }
 
   }
+
+  fun list(lista: ArrayList<Boletim>) {
+    lista.reverse()
+    initRecycler()
+  }
+
   fun formatarData(data: String): String {
     val diaString =data
     var formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy")
