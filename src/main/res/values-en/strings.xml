@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="boletim">CORONAVIRUS EPIDEMIOLOGICAL BULLETIN</string>
+    <string name="app_name">Bulletin Epidemiological</string>
+    <string name="cConfirmados">Confirmed Cases:</string>
+    <string name="confirmados">Confirmed</string>
+    <string name="cSuspeitos">Suspicious Cases:</string>
+    <string name="curados">Cured:</string>
+    <string name="descartados">Discarded Cases:</string>
+    <string name="hora">Schedule:</string>
+    <string name="isolamneto">In home isolation:</string>
+    <string name="monitoramento">Monitoring Cases:</string>
+    <string name="obitos">Death</string>
+    <string name="obitos2">Death:</string>
+    <string name="tHospitalar">In hospital Treatment:</string>
+    <string name="estatisticas">Statistics</string>
+</resources>
