@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Bulletin Epidemiological</string>
+    <string name="boletim">CORONAVIRUS EPIDEMIOLOGICAL BULLETIN</string>
+    <string name="cConfirmados">Confirmed Cases</string>
+</resources>
